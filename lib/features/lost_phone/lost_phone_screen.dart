@@ -482,8 +482,8 @@ class _LostPhoneScreenState extends State<LostPhoneScreen> {
     
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Alarm playing at maximum volume'),
+        SnackBar(
+          content: const Text('Alarm playing at maximum volume'),
           action: SnackBarAction(label: 'Stop', onPressed: () {}),
         ),
       );

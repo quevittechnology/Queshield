@@ -31,7 +31,7 @@ class NotificationService {
       channelDescription: 'Notifications for detected threats',
       importance: Importance.high,
       priority: Priority.high,
-      color: Color(0xFFFF453A),
+      color: const Color(0xFFFF453A),
       playSound: true,
     );
 
