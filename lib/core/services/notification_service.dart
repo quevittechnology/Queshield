@@ -25,13 +25,13 @@ class NotificationService {
     required String body,
     String? payload,
   }) async {
-    const androidDetails = AndroidNotificationDetails(
+    final AndroidNotificationDetails androidDetails = AndroidNotificationDetails(
       'threats',
       'Threat Alerts',
       channelDescription: 'Notifications for detected threats',
       importance: Importance.high,
       priority: Priority.high,
-      color: const Color(0xFFFF453A),
+      color: Color(0xFFFF453A),
       playSound: true,
     );
 
