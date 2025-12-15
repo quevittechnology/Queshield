@@ -85,3 +85,7 @@ flutter:
     - assets/icons/
     - assets/data/
     - assets/signatures/
+
+# Fix dependency conflicts
+dependency_overrides:
+  win32: ^5.5.0
