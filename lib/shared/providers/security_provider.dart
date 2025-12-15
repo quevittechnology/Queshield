@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'dart:async';
-import '../services/database_service.dart';
+import 'package:queshield/core/services/database_service.dart';
 
 class SecurityProvider extends ChangeNotifier {
   int _securityScore = 100;
@@ -143,4 +143,3 @@ class SecurityProvider extends ChangeNotifier {
     }
   }
 }
-```

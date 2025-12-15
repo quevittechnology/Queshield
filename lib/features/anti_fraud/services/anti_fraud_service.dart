@@ -1,5 +1,5 @@
-import '../../core/services/notification_service.dart';
-import '../../core/services/database_service.dart';
+import 'package:queshield/core/services/notification_service.dart';
+import 'package:queshield/core/services/database_service.dart';
 
 class AntiFraudService {
   static final AntiFraudService instance = AntiFraudService._internal();

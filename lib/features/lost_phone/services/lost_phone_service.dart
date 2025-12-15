@@ -2,8 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
-import '../../core/services/database_service.dart';
-import '../../core/services/notification_service.dart';
+import 'package:queshield/core/services/database_service.dart';
+import 'package:queshield/core/services/notification_service.dart';
 
 class LostPhoneService {
   static final LostPhoneService instance = LostPhoneService._internal();
