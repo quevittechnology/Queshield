@@ -1,59 +1,51 @@
-# Build QueShield APK with Codemagic
+# Quick Codemagic Setup (No YAML Needed)
 
-## Quick Start (5 minutes)
+## Use Workflow Editor Instead
 
-### 1. Open Codemagic
-Visit: https://codemagic.io/apps
+Since the yaml file isn't being detected, use Codemagic's **Workflow Editor** (UI mode):
 
-### 2. Add Your Repository
-- Click **"Add application"**
-- Select: `quevittechnology/Queshield`
-- Click **"Finish: Add application"**
+### 1. Open Your App in Codemagic
+- Go to: https://codemagic.io/apps
+- Click on your `Queshield` app
 
-### 3. Configure Build (Workflow Editor)
-Click **"Set up build"** or **"Workflow Editor"**, then add:
+### 2. Switch to Workflow Editor
+- Click **"Workflow Editor"** tab (not "codemagic.yaml")
+- This lets you configure everything in the UI
 
-**Build Scripts:**
+### 3. Add Build Scripts
+Click **"+ Add script"** twice and add:
+
+**Script 1:**
 ```bash
-# Script 1: Get packages
 flutter pub get
+```
 
-# Script 2: Build APK
+**Script 2:**
+```bash
 flutter build apk --release --split-per-abi
 ```
 
-**Artifacts:**
+### 4. Configure Artifacts
+In the **Artifacts** section, add:
 ```
 build/**/outputs/**/*.apk
 ```
 
-**Settings:**
-- Flutter: `stable`
-- Branch: `main`
-- Trigger on push: ✅ Enabled
+### 5. Set Environment
+- **Flutter version:** `stable`
+- **Build triggers:** Enable "Trigger on push to main"
 
-### 4. Start Build
+### 6. Start Build
 - Click **"Save"**
 - Click **"Start new build"**
+- Select branch: **main**
 - Wait ~10 minutes
 
-### 5. Download APK
+### 7. Download APK
+Once build completes:
 - Go to **"Artifacts"** tab
 - Download: `app-arm64-v8a-release.apk`
 
 ---
 
-## Troubleshooting
-
-**Can't see repository?**
-1. Go to: https://github.com/settings/installations
-2. Find "Codemagic CI/CD" → Configure
-3. Grant access to `Queshield` repository
-
-**Build fails?**
-Check build logs for errors and fix the specific issue.
-
----
-
-## That's it!
-Your APK will be ready in ~10 minutes. Install it on your Android device and test! 🚀
+**That's it!** No yaml file needed when using Workflow Editor mode. 🚀
